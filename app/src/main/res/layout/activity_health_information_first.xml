@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradiant"
+    tools:context=".ui.health_information.HealthInformationFirstActivity">
+
+    <ImageView
+        android:id="@+id/closeBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_close"
+
+        app:layout_constraintBottom_toTopOf="@+id/pageInfoTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pageInfoTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Help us with your\nhealth info"
+        android:textColor="@color/black"
+
+        android:textSize="28sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/closeBtn" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pageInfoTV">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tobaccoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tobaccoTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="7"
+                    android:text="Tobacco consumption* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/tobaccoRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tobaccoYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+
+                    <RadioButton
+                        android:id="@+id/tobaccoNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smokingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/smokingTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="7"
+                    android:text="Smoking cigarettes* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/smokingRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/smokingYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+
+                    <RadioButton
+                        android:id="@+id/smokingNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/asthmaLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/asthmaTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="7"
+                    android:text="Asthma* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/asthmaRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/asthmaYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+
+                    <RadioButton
+                        android:id="@+id/asthmaNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                    <RadioButton
+                        android:id="@+id/asthmaNotSure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't know"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/covidLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/covidTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="7"
+                    android:text="Had COVID attack* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/covidRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/covidYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+
+                    <RadioButton
+                        android:id="@+id/covidNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                    <RadioButton
+                        android:id="@+id/covidNotSure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't know"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vaccinatedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/vaccinatedTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="7"
+                    android:text="Vaccinated* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/vaccinatedRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/vaccinatedYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+
+                    <RadioButton
+                        android:id="@+id/vaccinatedNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                    <RadioButton
+                        android:id="@+id/vaccinatedNotSure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't know"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/highBPLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/highBPTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="7"
+                    android:text="High blood pressure* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/highBPRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/highBPYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+
+                    <RadioButton
+                        android:id="@+id/highBPNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                    <RadioButton
+                        android:id="@+id/highBPNotSure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't know"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/highBPInFamilyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/highBPInFamilyTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="7"
+                    android:text="High blood pressure\nin the history of family* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/highBPInFamilyRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/highBPInFamilyYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+
+                    <RadioButton
+                        android:id="@+id/highBPInFamilyNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                    <RadioButton
+                        android:id="@+id/highBPInFamilyNotSure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't know"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/heartDiseaseLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/heartDiseaseTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="7"
+                    android:text="Heart disease* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/heartDiseaseRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/heartDiseaseYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+
+                    <RadioButton
+                        android:id="@+id/heartDiseaseNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                    <RadioButton
+                        android:id="@+id/heartDiseaseNotSure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't know"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/heartDiseaseInFamilyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/heartDiseaseInFamilyTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="7"
+                    android:text="Heart disease \nin the history of family* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:id="@+id/heartDiseaseInFamilyRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/heartDiseaseInFamilyYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+
+                    <RadioButton
+                        android:id="@+id/heartDiseaseInFamilyNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                    <RadioButton
+                        android:id="@+id/heartDiseaseInFamilyNotSure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't know"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:background="@drawable/oval_shadow_bg"
+                android:elevation="10dp"
+                android:text="continue"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

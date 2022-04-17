@@ -23,6 +23,26 @@ public class SessionManager {
         return sharedPreferences.getBoolean("is_signed_in", false);
     }
 
+    public static void setUserId(Context context, String userId) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("user_id", userId);
+        editor.apply();
+    }
+
+    public static String getUserId() {
+        return sharedPreferences.getString("user_id", "");
+    }
+
+    public static void setIsProfileComplete(Context context, Boolean isProfileComplete) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("is_profile_complete", isProfileComplete);
+        editor.apply();
+    }
+
+    public static Boolean getIsProfileComplete() {
+        return sharedPreferences.getBoolean("is_profile_complete", false);
+    }
+
 
     public static void setAccessToken(Context context, String accessToken) {
         SharedPreferences.Editor editor = sharedPreferences.edit();

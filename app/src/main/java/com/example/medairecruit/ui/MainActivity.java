@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.example.medairecruit.databinding.ActivityMainBinding;
 import com.example.medairecruit.ui.home.HomeActivity;
+import com.example.medairecruit.ui.profile.ProfileActivity;
 import com.example.medairecruit.ui.sign_in.SignInActivity;
 import com.example.medairecruit.utils.SessionManager;
 
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkSignedIn() {
         if (SessionManager.getIsSignedIn()) {
-            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+            Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
             startActivity(intent);
             finish();
         } else {

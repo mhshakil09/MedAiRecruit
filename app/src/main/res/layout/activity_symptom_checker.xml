@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.symptom_checker.SymptomCheckerActivity"
+    android:background="@drawable/background_gradiant">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/closeBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_close"
+
+                app:layout_constraintBottom_toTopOf="@id/pageInfoTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pageInfoTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Tell us a bit more about it"
+                android:textColor="@color/black"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/closeBtn" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/selectedSymptomsCG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+
+                app:layout_constraintTop_toBottomOf="@id/pageInfoTV">
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stomach pain"
+                    android:foregroundTint="#D6DCEB"
+                    app:closeIconVisible="true"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nausea or vomiting"
+                    android:foregroundTint="#D6DCEB"
+                    app:closeIconVisible="true"/>
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <EditText
+                android:id="@+id/searchET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/oval_bg_modified"
+                android:layout_margin="20dp"
+                android:hint="type your symptoms"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:maxLines="1"
+
+                app:layout_constraintTop_toBottomOf="@id/selectedSymptomsCG" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_mic"
+                android:layout_marginEnd="20dp"
+
+                app:layout_constraintTop_toTopOf="@id/searchET"
+                app:layout_constraintBottom_toBottomOf="@id/searchET"
+                app:layout_constraintEnd_toEndOf="@id/searchET" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSearched"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchET"
+
+                tools:itemCount="3"
+                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_suggested_layout"
+                tools:spanCount="1" />
+
+            <TextView
+                android:id="@+id/quickSuggestionsTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Quick suggestion for you"
+                android:textColor="@color/black"
+
+                android:textSize="14sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewSearched" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSuggested"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="12dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/quickSuggestionsTV"
+
+                tools:itemCount="7"
+                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_suggested_layout"
+                tools:spanCount="3" />
+
+
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:background="@drawable/oval_shadow_bg"
+                android:elevation="10dp"
+                android:text="submit"
+                android:textColor="@color/black"
+
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewSuggested"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

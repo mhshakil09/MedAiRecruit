@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.health_information.HealthInformationSecondActivity"
+    android:background="@drawable/background_gradiant">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_back"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/closeBtn" />
+
+    <ImageView
+        android:id="@+id/closeBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_close"
+
+        app:layout_constraintBottom_toTopOf="@id/pageInfoTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pageInfoTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Allergies and Regular \nMedication"
+        android:textColor="@color/black"
+
+        android:textSize="28sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/closeBtn" />
+
+    <TextView
+        android:id="@+id/pageInfo2TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Select multiple if applicable:"
+        android:textColor="@color/black"
+
+        android:textSize="14sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pageInfoTV" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pageInfo2TV">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/allergiesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/allergiesTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:gravity="right"
+                    android:layout_weight="6"
+                    android:text="Allergies* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp"
+
+                    android:layout_marginTop="6dp" />
+
+                <GridLayout
+                    android:id="@+id/allergiesOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/dust"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Dust"/>
+
+                    <CheckBox
+                        android:id="@+id/food"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Food"
+                        android:layout_marginLeft="16dp"/>
+
+                    <CheckBox
+                        android:id="@+id/drugs"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Drugs"
+                        android:layout_gravity="left"/>
+
+                    <CheckBox
+                        android:id="@+id/material"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Material"
+                        android:layout_marginLeft="16dp"/>
+
+                    <CheckBox
+                        android:id="@+id/insects"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Insects"/>
+
+                    <CheckBox
+                        android:id="@+id/allergiesOthers"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Others"
+                        android:layout_marginLeft="16dp"/>
+
+                </GridLayout>
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/allergiesOthersET"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/rectangle_bg"
+                android:hint="Please type here"
+                android:minLines="4"
+                android:textSize="10sp"
+                android:gravity="top"
+                android:padding="8dp"
+                android:layout_marginTop="16dp"
+
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+
+            <LinearLayout
+                android:id="@+id/regularMedicinesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/regularMedicinesTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:gravity="right"
+                    android:layout_weight="6"
+                    android:text="Regular medicines* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp"
+
+                    android:layout_marginTop="6dp" />
+
+                <GridLayout
+                    android:id="@+id/regularMedicinesOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/nitroglycerin"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Nitroglycerin"/>
+
+                    <CheckBox
+                        android:id="@+id/glucose"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Glucose"
+                        android:layout_marginLeft="16dp"/>
+
+                    <CheckBox
+                        android:id="@+id/insulin"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Insulin"/>
+
+                    <CheckBox
+                        android:id="@+id/inhaler"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Inhaler"
+                        android:layout_marginLeft="16dp"/>
+
+                    <CheckBox
+                        android:id="@+id/epinephrine"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Epinephrine"/>
+
+                    <CheckBox
+                        android:id="@+id/statin"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Statin"
+                        android:layout_marginLeft="16dp"/>
+
+                    <CheckBox
+                        android:id="@+id/regularMedicinesOther"
+                        android:layout_height="36dp"
+                        android:layout_width="120dp"
+                        android:text="Other"/>
+
+                </GridLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/menopauseTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="right"
+                    android:layout_weight="6"
+                    android:text="Menopause* :"
+                    android:textColor="#574D4D"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="3">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:entries="@array/select"
+                        android:overlapAnchor="false"
+                        android:layout_marginStart="8dp"
+
+                        android:spinnerMode="dropdown"
+                        android:elevation="10dp"
+                        android:foregroundTint="#9C9C9C"
+                        android:textAlignment="center" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="8dp"
+                        android:background="#707070"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:background="@drawable/oval_shadow_bg"
+                android:elevation="10dp"
+                android:text="continue"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.medairecruit.databinding.ActivitySignInBinding;
 import com.example.medairecruit.ui.MainActivity;
 import com.example.medairecruit.ui.home.HomeActivity;
+import com.example.medairecruit.ui.profile.ProfileActivity;
 import com.example.medairecruit.utils.Helper;
 import com.example.medairecruit.utils.SessionManager;
 
@@ -130,7 +131,8 @@ public class SignInActivity extends AppCompatActivity {
                     if (!jsonObject.getString("refresh").isEmpty() && !jsonObject.getString("access").isEmpty() ) {
                         SessionManager.setIsSignedIn(getApplicationContext(), true);
                         finish();
-                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                        SessionManager.setUserId(getApplicationContext(), userId);
+                        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                     }
                 }
                 catch (Exception e){

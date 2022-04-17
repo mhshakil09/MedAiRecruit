@@ -4,15 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/drawable/background_gradiant.xml" value="0.25" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/drawable/ic_back.xml" value="0.356" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/drawable/ic_mic.xml" value="0.2485" />
         <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/drawable/ic_splash_screen.xml" value="0.201" />
         <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/drawable/oval_bg.xml" value="0.356" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/drawable/oval_bg_modified.xml" value="0.356" />
         <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/drawable/oval_shadow_bg.xml" value="0.356" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/drawable/rectangle_bg.xml" value="0.2035" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/drawable/underline_bg.xml" value="0.2035" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_health_information_first.xml" value="0.371875" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_health_information_second.xml" value="0.33" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_health_information_third.xml" value="0.371875" />
         <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_home.xml" value="0.371875" />
         <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_profile.xml" value="0.3578125" />
-        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_sign_in.xml" value="0.5" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_profile.xml" value="0.33" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
         <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_splash_screen.xml" value="0.371875" />
         <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_splash_screen_activity.xml" value="0.371875" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/activity_symptom_checker.xml" value="0.33" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/custom_dialog.xml" value="0.371875" />
+        <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/item_selected_layout.xml" value="0.371875" />
         <entry key="..\:/FlutterProjects/MedAiRecruit/app/src/main/res/layout/layout.xml" value="0.17916666666666667" />
       </map>
     </option>
