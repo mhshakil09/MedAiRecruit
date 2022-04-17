@@ -16,8 +16,7 @@
         android:textSize="28sp"
         android:textStyle="bold"
         android:layout_marginTop="80dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp"
+        android:layout_marginStart="30dp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,8 +30,7 @@
         android:textColor="#574D4D"
         android:textSize="14sp"
         android:layout_marginTop="12dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp"
+        android:layout_marginStart="30dp"
 
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,8 +45,8 @@
         android:textColor="#574D4D"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginTop="80dp"
 
         app:layout_constraintTop_toBottomOf="@id/infoTV"
@@ -59,8 +57,14 @@
         android:id="@+id/userId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/oval_bg"
+        android:focusable="false"
 
         app:layout_constraintTop_toBottomOf="@id/userIdTV"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,9 +78,9 @@
         android:textColor="#574D4D"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="32dp"
 
         app:layout_constraintTop_toBottomOf="@id/userId"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,22 +90,31 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="14dp"
         android:inputType="textPassword"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/oval_bg"
+        android:focusable="false"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordTV" />
 
-    <ToggleButton
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/toggleBtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginStart="20dp"
+        android:scaleX=".8"
+        android:scaleY=".7"
+
 
         app:layout_constraintTop_toBottomOf="@id/password"
-        app:layout_constraintStart_toStartOf="@id/password" />
+        app:layout_constraintStart_toStartOf="@id/password"  />
 
     <TextView
         android:layout_width="wrap_content"
@@ -134,6 +147,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign In"
+        android:background="@drawable/oval_shadow_bg"
+        android:textColor="@color/black"
+        android:elevation="10dp"
+
         app:layout_constraintTop_toBottomOf="@id/forgotPasswordTV"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

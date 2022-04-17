@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.CompoundButton;
 
 import com.android.volley.AuthFailureError;
@@ -45,6 +46,8 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        getSupportActionBar().hide();
 
         initClickListener();
         initSignInData();
