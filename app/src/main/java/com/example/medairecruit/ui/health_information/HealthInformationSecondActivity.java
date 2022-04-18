@@ -14,6 +14,7 @@ import com.example.medairecruit.databinding.ActivityHomeBinding;
 import com.example.medairecruit.ui.MainActivity;
 import com.example.medairecruit.ui.home.HomeActivity;
 import com.example.medairecruit.ui.symptom_checker.SymptomCheckerActivity;
+import com.example.medairecruit.utils.Helper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,11 +80,29 @@ public class HealthInformationSecondActivity extends AppCompatActivity {
         });
 
         binding.submitBtn.setOnClickListener(view -> {
-            initFetchData();
             //all data is in hand, just need to send in API
-            Intent intent = new Intent(getApplicationContext(), SymptomCheckerActivity.class);
-            startActivity(intent);
+            if (verify()) {
+                Intent intent = new Intent(getApplicationContext(), SymptomCheckerActivity.class);
+                startActivity(intent);
+            }
         });
+    }
+
+    private Boolean verify() {
+        initFetchData();
+        if (allergiesList.isEmpty()) {
+            Helper.toast(getApplicationContext(), "Please select at least one options from Allergies");
+            return false;
+        }
+        if (binding.allergiesOthers.isChecked() && allergiesOtherDetails.length() < 5) {
+            Helper.toast(getApplicationContext(), "Please describe in details");
+            return false;
+        }
+        if (regularMedicinesList.isEmpty()) {
+            Helper.toast(getApplicationContext(), "Please select at least one options from Regular Medicines");
+            return false;
+        }
+        return true;
     }
 
     private void initFetchData() {
