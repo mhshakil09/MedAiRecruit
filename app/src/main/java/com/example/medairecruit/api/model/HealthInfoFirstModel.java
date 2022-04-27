@@ -79,6 +79,35 @@ public class HealthInfoFirstModel implements Parcelable {
                 '}';
     }
 
+    public String getTobacco() {
+        return tobacco;
+    }
+    public String getSmoking() {
+        return smoking;
+    }
+    public String getAsthma() {
+        return asthma;
+    }
+    public String getCovid() {
+        return covid;
+    }
+    public String getVaccinated() {
+        return vaccinated;
+    }
+    public String getHighBP() {
+        return highBP;
+    }
+    public String getHighBPInFamily() {
+        return highBPInFamily;
+    }
+    public String getHeartDisease() {
+        return heartDisease;
+    }
+    public String getHeartDiseaseInFamily() {
+        return heartDiseaseInFamily;
+    }
+
+
     @Override
     public int describeContents() {
         return 0;

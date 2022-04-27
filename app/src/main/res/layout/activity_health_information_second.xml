@@ -270,7 +270,7 @@
                     android:layout_weight="3">
 
                     <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/spinnerGender"
+                        android:id="@+id/spinnerMenopause"
                         android:layout_width="match_parent"
                         android:layout_height="32dp"
                         android:entries="@array/select"

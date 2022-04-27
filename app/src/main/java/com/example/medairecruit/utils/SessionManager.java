@@ -39,6 +39,19 @@ public class SessionManager {
         editor.apply();
     }
 
+
+    public static void setPatientId(Context context, String patientId) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("patient_id", patientId);
+        editor.apply();
+    }
+
+    public static String getPatientId() {
+        return sharedPreferences.getString("patient_id", "");
+    }
+
+
+
     public static Boolean getIsProfileComplete() {
         return sharedPreferences.getBoolean("is_profile_complete", false);
     }

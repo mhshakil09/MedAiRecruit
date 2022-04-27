@@ -47,31 +47,35 @@
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/selectedSymptomsCG"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:layout_margin="20dp"
+                android:maxHeight="120dp"
+                android:orientation="vertical"
 
-                app:layout_constraintTop_toBottomOf="@id/pageInfoTV">
+                app:layout_constraintTop_toBottomOf="@id/pageInfoTV"
+                app:layout_constraintBottom_toTopOf="@id/autoCompleteET">
 
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Stomach pain"
-                    android:foregroundTint="#D6DCEB"
-                    app:closeIconVisible="true"/>
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Stomach pain"-->
+<!--                    android:foregroundTint="#D6DCEB"-->
+<!--                    app:closeIconVisible="true"/>-->
 
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nausea or vomiting"
-                    android:foregroundTint="#D6DCEB"
-                    app:closeIconVisible="true"/>
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Nausea or vomiting"-->
+<!--                    android:foregroundTint="#D6DCEB"-->
+<!--                    app:closeIconVisible="true"/>-->
 
             </com.google.android.material.chip.ChipGroup>
 
-            <EditText
-                android:id="@+id/searchET"
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteET"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:dropDownHeight="120dp"
                 android:background="@drawable/oval_bg_modified"
                 android:layout_margin="20dp"
                 android:hint="type your symptoms"
@@ -80,7 +84,7 @@
                 android:inputType="text"
                 android:maxLines="1"
 
-                app:layout_constraintTop_toBottomOf="@id/selectedSymptomsCG" />
+                app:layout_constraintTop_toBottomOf="@id/selectedSymptomsCG"/>
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -88,34 +92,17 @@
                 android:background="@drawable/ic_mic"
                 android:layout_marginEnd="20dp"
 
-                app:layout_constraintTop_toTopOf="@id/searchET"
-                app:layout_constraintBottom_toBottomOf="@id/searchET"
-                app:layout_constraintEnd_toEndOf="@id/searchET" />
+                app:layout_constraintTop_toTopOf="@id/autoCompleteET"
+                app:layout_constraintBottom_toBottomOf="@id/autoCompleteET"
+                app:layout_constraintEnd_toEndOf="@id/autoCompleteET" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewSearched"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/searchET"
-
-                tools:itemCount="3"
-                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                tools:listitem="@layout/item_suggested_layout"
-                tools:spanCount="1" />
 
             <TextView
                 android:id="@+id/quickSuggestionsTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="120dp"
                 android:text="Quick suggestion for you"
                 android:textColor="@color/black"
 
@@ -123,7 +110,7 @@
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recyclerViewSearched" />
+                app:layout_constraintTop_toBottomOf="@id/autoCompleteET" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewSuggested"
